@@ -1,6 +1,15 @@
 package com.zx.bean;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
+/**
+ * 红包记录类
+ * @author admin
+ *
+ */
+@Document(indexName = "redpacket", type = "packet")
 public class Packet {
+	private String id;
 
 	private String phoneNum;
 	
