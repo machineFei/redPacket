@@ -1,21 +1,36 @@
 package com.zx.bean;
+
+import org.springframework.data.elasticsearch.annotations.Document;
+
 /**
  * 奖品配置类
  * @author admin
  *
  */
+@Document(indexName = "redpacket", type = "prize")
 public class Prize {
 	private String id;                    //uuid,奖品id
+	
 	private String actid;                 //uuid,活动id
+	
 	private String name;                  //奖品名称
+	
 	private String level;                 //等级   注：同一活动中等级具有唯一性
+	
 	private String type;                  //0和微币，1流量，2优惠券
+	
 	private int value;                    //奖品金额 用于和微币充值
+	
 	private int amount;                   //奖品总量
+	
 	private String imgurl;                //"http://1.png",奖品图
+	
 	private String tips;                  //"中奖啦",中奖文案,
+	
 	private String status;                //0关闭 1开启 2软删除
+	
 	private String created;               //1525251708667,创建时间
+	
 	private String creator;               //:"admin" 创建人
 	
 	public String getId() {

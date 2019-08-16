@@ -7,8 +7,22 @@ public class JsonResult {
     private String msg="OK";
 
     private String content="";
+    
+    /**
+     * 中奖信息
+     */
+    private Prize prize;
+    
 
-    public String getMsg() {
+    public Prize getPrize() {
+		return prize;
+	}
+
+	public void setPrize(Prize prize) {
+		this.prize = prize;
+	}
+
+	public String getMsg() {
         return msg;
     }
 

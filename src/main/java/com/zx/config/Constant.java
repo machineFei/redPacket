@@ -7,6 +7,17 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Constant {
 	private String prizeList;
+	
+	private String packetTopic;
+	
+
+	public String getPacketTopic() {
+		return packetTopic;
+	}
+
+	public void setPacketTopic(String packetTopic) {
+		this.packetTopic = packetTopic;
+	}
 
 	public String getPrizeList() {
 		return prizeList;
