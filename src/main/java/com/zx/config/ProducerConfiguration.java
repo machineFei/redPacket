@@ -7,7 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+/**
+ * 生产者配置类
+ * @author lishenbo
+ *
+ */
 @Configuration
 public class ProducerConfiguration {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProducerConfiguration.class);

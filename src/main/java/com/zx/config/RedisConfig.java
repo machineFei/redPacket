@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * redis 配置类
  * 
- * @author Administrator
+ * @author lishenbo
  *
  */
 @Configuration

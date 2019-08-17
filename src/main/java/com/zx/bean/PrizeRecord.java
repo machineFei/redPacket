@@ -5,34 +5,35 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldIndex;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * 活动中奖纪录
- * @author admin
+ * @author lishenbo
  *
  */
 @Document(indexName = "redpacket", type = "prize_record")
 public class PrizeRecord {
 	@Id
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String id;                          //uuid 记录id
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String prizeId;                    //uuid 奖品id
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String actid;                       //uuid 活动id
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String phone;                       //中奖手机号
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Long)
 	private Long date;                          //1525251708667  中奖日期
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String name;                        //":"奖品1",奖品名称
 	
-	@Field(index = FieldIndex.not_analyzed, store = true)
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String type;                        //0和微币，1流量，2优惠券
 
 	public String getId() {

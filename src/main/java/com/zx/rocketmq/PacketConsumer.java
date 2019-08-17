@@ -12,7 +12,11 @@ import org.springframework.stereotype.Service;
 
 import com.zx.config.AbstractConsumer;
 import com.zx.config.RocketMQConfig;
-
+/**
+ * 红包记录消费者
+ * @author lishenbo
+ *
+ */
 @Service
 public class PacketConsumer extends AbstractConsumer implements ApplicationListener<ContextRefreshedEvent> {
 	@Autowired

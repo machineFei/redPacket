@@ -15,7 +15,7 @@ import com.alibaba.fastjson.JSONObject;
 
 /**
  * 普通消息生产者
- * @author admin
+ * @author lishenbo
  *
  */
 @Service
