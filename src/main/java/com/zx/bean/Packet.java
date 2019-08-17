@@ -28,6 +28,16 @@ public class Packet {
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Long)
 	private Long dataTime;
+	
+	
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	public String getPhoneNum() {
 		return phoneNum;

@@ -21,8 +21,18 @@ public class Constant {
 	
 	private String userSort;
 	
+	/**红包id 在redis中存储的set集合的key的前缀 */
+	private String packetIdSetKeyPrefix;
 	
 	
+
+	public String getPacketIdSetKeyPrefix() {
+		return packetIdSetKeyPrefix;
+	}
+
+	public void setPacketIdSetKeyPrefix(String packetIdSetKeyPrefix) {
+		this.packetIdSetKeyPrefix = packetIdSetKeyPrefix;
+	}
 
 	public String getUserSort() {
 		return userSort;

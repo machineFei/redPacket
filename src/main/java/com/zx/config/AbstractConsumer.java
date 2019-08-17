@@ -35,6 +35,7 @@ public abstract class AbstractConsumer {
 		consumer.setNamesrvAddr(mqConfig.getNamesrvAddr());
 		if(minThread != null) consumer.setConsumeThreadMin(minThread);
 		if(maxThread != null) consumer.setConsumeThreadMax(maxThread);
+		//consumer.setPullBatchSize(pullBatchSize);
 
 		try {
 			consumer.subscribe(topic, tag);

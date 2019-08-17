@@ -58,7 +58,11 @@ public class ClickPacketController {
 		// 2.判断是否到红包开抢时间，是否超过2个小时
 
 		// 校验红包id,是否伪造红包
-
+		String setKey = constant.getPacketIdSetKeyPrefix()+(packet.getId().hashCode()%5);
+		Boolean member = redisTemplate.opsForSet().isMember(setKey, packet.getId());
+		if(!member){
+			return jsonResult;
+		}
 		// 3.处理红包记录
 		// 3.1 redis 记录用户红包个数,达到8个则去竞争奖品
 		// 用户 key RedPacket:actId:phoneNum:YYYYMMdd
