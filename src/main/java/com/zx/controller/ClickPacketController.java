@@ -21,10 +21,10 @@ import com.zx.util.DateTimeUtil;
 import com.zx.util.IDFactory;
 import com.zx.util.ThreadPoolManager;
 
-@RestController("/packet")
-public class PacketController {
+@RestController
+public class ClickPacketController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(PacketController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ClickPacketController.class);
 	
 	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;
@@ -38,12 +38,14 @@ public class PacketController {
 	@Autowired
 	private PrizeRecordESRepository prizeRecordESRepository;
 	
-	@PostMapping("/save")
+	@PostMapping("/clickredbag")
 	public JsonResult save(@RequestBody Packet packet){
 		JsonResult jsonResult = new JsonResult();
 		//1.判断活动开展时间
 		
-		//2.判断是否到红包开抢时间
+		//2.判断是否到红包开抢时间，是否超过2个小时
+		
+		//校验红包id,是否伪造红包
 		
 		//3.处理红包记录
 		//3.1 redis 记录用户红包个数,达到8个则去竞争奖品
