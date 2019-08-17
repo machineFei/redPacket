@@ -26,13 +26,15 @@ public abstract class AbstractConsumer {
 	private RocketMQConfig mqConfig;
 
 	// 开启消费者监听服务
-	public void start(String topic, String tag) {
+	public void start(String topic, String tag, Integer minThread, Integer maxThread) {
 		LOGGER.info("开启" + topic + ":" + tag + "消费者-------------------");
 		LOGGER.info(mqConfig.toString());
 
 		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(mqConfig.getConumerGroup());
 
 		consumer.setNamesrvAddr(mqConfig.getNamesrvAddr());
+		if(minThread != null) consumer.setConsumeThreadMin(minThread);
+		if(maxThread != null) consumer.setConsumeThreadMax(maxThread);
 
 		try {
 			consumer.subscribe(topic, tag);
