@@ -18,8 +18,19 @@ public class UserOrder {
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String phoneNum;
 	
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
+	private String actid;
+	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Long)
 	private Long sort;
+
+	public String getActid() {
+		return actid;
+	}
+
+	public void setActid(String actid) {
+		this.actid = actid;
+	}
 
 	public String getPhoneNum() {
 		return phoneNum;

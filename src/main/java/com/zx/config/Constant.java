@@ -24,7 +24,18 @@ public class Constant {
 	/**红包id 在redis中存储的set集合的key的前缀 */
 	private String packetIdSetKeyPrefix;
 	
+	/**活动信息 在redis中存储的key的前缀 */
+	private String activityRedisPrefix;
 	
+	
+
+	public String getActivityRedisPrefix() {
+		return activityRedisPrefix;
+	}
+
+	public void setActivityRedisPrefix(String activityRedisPrefix) {
+		this.activityRedisPrefix = activityRedisPrefix;
+	}
 
 	public String getPacketIdSetKeyPrefix() {
 		return packetIdSetKeyPrefix;

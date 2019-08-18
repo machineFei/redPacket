@@ -1,57 +1,42 @@
 package com.zx.bean;
 
+import java.util.List;
+
 public class JsonResult {
 
-    private int ret = 0;
+    private int code;
 
-    private String msg="OK";
-
-    private String content="";
+    private String msg;
     
+    private List<String> packetIdList;
     /**
      * 中奖信息
      */
     private Prize prize;
     
-
-    public Prize getPrize() {
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	public String getMsg() {
+		return msg;
+	}
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	public List<String> getPacketIdList() {
+		return packetIdList;
+	}
+	public void setPacketIdList(List<String> packetIdList) {
+		this.packetIdList = packetIdList;
+	}
+	public Prize getPrize() {
 		return prize;
 	}
-
 	public void setPrize(Prize prize) {
 		this.prize = prize;
 	}
-
-	public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public int getRet() {
-        return ret;
-    }
-
-    public void setRet(int ret) {
-        this.ret = ret;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    @Override
-    public String toString() {
-        return "JsonResult{" +
-                "ret=" + ret +
-                ", msg='" + msg + '\'' +
-                ", content='" + content + '\'' +
-                '}';
-    }
+    
 }

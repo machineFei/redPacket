@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSONObject;
+import com.zx.bean.JsonResult;
 import com.zx.config.Constant;
 import com.zx.util.IDFactory;
 
@@ -73,6 +74,7 @@ public class GetPacketController {
 		for (int i = 0; i < 20; i++) {
 			packetIdList.add("hello:"+IDFactory.getUUID().hashCode()%5);
 		}
+		JsonResult jsonResult = new JsonResult();
 		System.out.println(JSONObject.toJSONString(packetIdList));
 	}
 

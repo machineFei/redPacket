@@ -54,12 +54,13 @@ public class ClickPacketController {
 	public JsonResult save(@RequestBody Packet packet) {
 		JsonResult jsonResult = new JsonResult();
 		// 1.判断活动开展时间
-
+		
 		// 2.判断是否到红包开抢时间，是否超过2个小时
 
 		// 校验红包id,是否伪造红包
 		String setKey = constant.getPacketIdSetKeyPrefix()+(packet.getId().hashCode()%5);
 		Boolean member = redisTemplate.opsForSet().isMember(setKey, packet.getId());
+		//删除红包！！！！！！！！！！
 		if(!member){
 			return jsonResult;
 		}
@@ -200,4 +201,8 @@ public class ClickPacketController {
 			return false;
 		}
 	}
+	
+	/**
+	 * 判断活动是否开始
+	 */
 }
