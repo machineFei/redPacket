@@ -15,6 +15,7 @@ public class Constant {
 	
 	private String packetTopic;
 	
+	/**奖品信息 在redis中存储的key的前缀*/
 	private String prizeSetInfo;
 	
 	private String prizeTotal;

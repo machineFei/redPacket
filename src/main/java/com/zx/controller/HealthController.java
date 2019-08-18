@@ -28,9 +28,7 @@ public class HealthController {
         String result = testDBService.test(phoneNum);
 
         JsonResult jsonResult = new JsonResult();
-
-        jsonResult.setContent(result);
-
+        
         return jsonResult;
     }
 }

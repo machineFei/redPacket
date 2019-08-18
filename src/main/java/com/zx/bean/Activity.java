@@ -30,7 +30,10 @@ public class Activity {
 	private Long prizeTime;                       //每日开奖时间
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Long)
-	private Long dutation;                        //红包持续时间
+	private Long dutation;                        //红包持续时间  毫秒值
+	
+	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Integer)
+	private Integer packetNum;                    //竞争奖品，需要集齐的红包个数；
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Long)
 	private Long created;                       //1525251708667,创建时间
@@ -40,6 +43,17 @@ public class Activity {
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.Integer)
 	private Integer status;                        //0关闭 1开启 2软删除
+	
+	
+	
+
+	public Integer getPacketNum() {
+		return packetNum;
+	}
+
+	public void setPacketNum(Integer packetNum) {
+		this.packetNum = packetNum;
+	}
 
 	public String getId() {
 		return id;

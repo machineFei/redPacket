@@ -21,7 +21,7 @@ public class Packet {
 	private String phoneNum;
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
-	private String actId;
+	private String actid;
 	
 	@Field(index = FieldIndex.not_analyzed, store = true, type = FieldType.String)
 	private String msg;
@@ -62,18 +62,18 @@ public class Packet {
 	public void setDataTime(Long dataTime) {
 		this.dataTime = dataTime;
 	}
-
-	public String getActId() {
-		return actId;
+	
+	public String getActid() {
+		return actid;
 	}
 
-	public void setActId(String actId) {
-		this.actId = actId;
+	public void setActid(String actid) {
+		this.actid = actid;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Packet [phoneNum=" + phoneNum + ", actId=" + actId + ", msg=" + msg + ", dataTime=" + dataTime + "]";
+		return "Packet [phoneNum=" + phoneNum + ", actid=" + actid + ", msg=" + msg + ", dataTime=" + dataTime + "]";
 	}
 	
 }
